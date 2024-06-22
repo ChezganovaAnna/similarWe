@@ -1,0 +1,114 @@
+id: 211043234
+first_name_gen: Ани
+nickname: 
+maiden_name: 
+domain: chezganovaanya
+city: Array
+country: Array
+timezone: 3
+photo_id: 211043234_457246757
+has_photo: 1
+has_mobile: 1
+is_friend: 0
+can_post: 1
+can_see_all_posts: 1
+can_see_audio: 1
+interests: Музыка, творчество
+tv: 
+quotes: Сделала людям добро - и беги
+(народная мудрость)
+about: ...
+games: 
+movies: Суинни Тод
+activities: Доброволец
+music: Эпидемия, Tigersclaw, Sunburst, Последнее Испытание, Тетрадь Смерти, Меч короля Артура, Дорога без возврата, Эльфийская рукопись, Сокровища Энии, Легенда Ксентарона, Blockheads, Пицца, и еще много другого
+can_write_private_message: 1
+can_send_friend_request: 1
+home_phone: 
+site: 
+status: Сделала людям добро - и беги😏
+last_seen: Array
+followers_count: 213
+is_favorite: 0
+is_hidden_from_feed: 0
+occupation: Array
+career: Array
+military: Array
+university: 1192536
+university_name: Метатех (Институт iSpring)
+faculty: 2282710
+faculty_name: Программная инженерия
+graduation: 2026
+education_status: Студентка (бакалавр)
+home_town: Йошкар-Ола
+relation: 0
+personal: Array
+universities: Array
+relatives: Array
+is_no_index: 1
+screen_name: chezganovaanya
+online: 0
+verified: 0
+friend_status: 0
+first_name: Аня
+last_name: Чезганова
+can_access_closed: 1
+is_closed: 
+
+id: 211043234
+first_name_gen: Ани
+nickname: 
+maiden_name: 
+domain: chezganovaanya
+city: Array
+country: Array
+timezone: 3
+photo_id: 211043234_457246757
+has_photo: 1
+has_mobile: 1
+is_friend: 0
+can_post: 1
+can_see_all_posts: 1
+can_see_audio: 1
+interests: Музыка, творчество
+tv: 
+quotes: Сделала людям добро - и беги
+(народная мудрость)
+about: ...
+games: 
+movies: Суинни Тод
+activities: Доброволец
+music: Эпидемия, Tigersclaw, Sunburst, Последнее Испытание, Тетрадь Смерти, Меч короля Артура, Дорога без возврата, Эльфийская рукопись, Сокровища Энии, Легенда Ксентарона, Blockheads, Пицца, и еще много другого
+can_write_private_message: 1
+can_send_friend_request: 1
+home_phone: 
+site: 
+status: Сделала людям добро - и беги😏
+last_seen: Array
+followers_count: 213
+is_favorite: 0
+is_hidden_from_feed: 0
+occupation: Array
+career: Array
+military: Array
+university: 1192536
+university_name: Метатех (Институт iSpring)
+faculty: 2282710
+faculty_name: Программная инженерия
+graduation: 2026
+education_status: Студентка (бакалавр)
+home_town: Йошкар-Ола
+relation: 0
+personal: Array
+universities: Array
+relatives: Array
+is_no_index: 1
+screen_name: chezganovaanya
+online: 0
+verified: 0
+friend_status: 0
+first_name: Аня
+last_name: Чезганова
+can_access_closed: 1
+is_closed: 
+
