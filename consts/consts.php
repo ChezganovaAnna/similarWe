@@ -1,16 +1,15 @@
 <?php
-const ACCESS_TOKEN = 'vk1.a.yPsIXab1Jl7-OojzLQf8OSYikdNIbrAOGRnOG_HWTvSxT6QnPKEuB7hIFzrnRS73BwvBVHoy5Mv0mXidCoagVLWQNkEW9rdqieh-t1X6EMl_tjFgd4U6aI-U99IhmjCeOZh-SW8XYU6-Ygh9_mp-UHSoynU5jsZJ4zlLcuTSoZU64dKjTClNDHieJLlRTXUq';
-const FIELDS = "activities,about,bdate.".
-"books,can_post,can_see_all_posts,can_see_audio,".
-"can_send_friend_request,can_write_private_message,".
-"career,city,country,connections,contacts,counters,".
-"domain,education,exports,first_name_gen,followers_count,".
-"friend_status,games,has_mobile,has_photo,home_town,".
-"interests,is_favorite,is_friend,is_hidden_from_feed,".
-"is_no_index,last_seen,lists,maiden_name,military,".
-"movies,nickname,occupation,online,personal,".
-"photo_id,quotes,relation,relatives,screen_name,site,".
-"status,timezone,tv,universities,verified,deactivated,music";
+const ACCESS_TOKEN = 'vk1.a.DvAwXpfYQm2rMNCBW_nYCucuWQhQA1Ol8Kq8hSLJJ0GXcpfNL7Si9ngOnUMnYmXayzMYsZuB1skipwUCmJRLBLOnxmZVdeuRmwX2oePrvZs6AGYgiNjWBXJmw69pWAZlT-PDuUsu61H_poqPB6IwI82yoMmtN5-C5fABjVaktvF4R6fZd321BEhWQEv9pn65';
+const FIELDS = "activities,about,sex,bdate,".
+"books,schools,".
+"career,city,country,contacts,counters,".
+"domain,education,exports,followers_count,".
+"friend_status,games,home_town,".
+"interests,".
+"last_seen,military,".
+"movies,occupation,personal,".
+"quotes,relation,relatives,screen_name,".
+"timezone,tv,universities,deactivated,is_closed";
 const METHOD_USERS_GET = "/users.get?user_ids=";
 const APP_ID = 51900699;
 const USER_ID = 211043234;

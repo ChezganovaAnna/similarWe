@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 require_once "./consts/consts.php";
 
+$user_id = USER_ID;
+
 function getUserInfo($user_id): array {
     $url = 'https://api.vk.com/method'. METHOD_USERS_GET . $user_id . '&access_token=' . ACCESS_TOKEN . '&fields=' . FIELDS . '&v=5.131';
     $response = file_get_contents($url);
@@ -12,15 +14,13 @@ function getUserInfo($user_id): array {
 }
 
 $vkId = USER_ID;
-//$user_info = getUserInfo($vkId);
+$user_info = getUserInfo($vkId);
+$is_closed_values = array_column($user_info["response"], 'is_closed');
 
 
-function getUsersFromGroup($group_id): array {
-    $url = 'https://api.vk.com/method/groups.getMembers?group_id=' . $group_id . '&access_token=' . ACCESS_TOKEN . '&v=5.131';
-    $response = file_get_contents($url);
-    $data = json_decode($response, true);
-    return $data['response']['items'];
-}
+echo $user_info['response']['0']['city']['id'];
+
+
 
 function writeUsersToFile($users, $file_path) {
     foreach ($users as $user_id) {
@@ -29,41 +29,9 @@ function writeUsersToFile($users, $file_path) {
 }
 
 
-$users = getUsersFromGroup(210114453);
-
-foreach ($users as $user_id) {
-    $user_info = getUserInfo($user_id);
-    if ($user_info['city']) {
-        echo $user_id . ': ' . $user_info['city']['id'] . "\n";
-    }
-}
-
-
-$group_id = 210114453;
-$file_path = './group_members.txt';
-
-$offset = 0;
-$limit = 500;
-$users = [];
-
-while (true) {
-    $url = 'https://api.vk.com/method/groups.getMembers?group_id=' . $group_id . '&offset=' . $offset . '&count=' . $limit . '&access_token=' . ACCESS_TOKEN . '&v=5.131';
-    $response = file_get_contents($url);
-    $data = json_decode($response, true);
-
-    if (empty($data['response']['items'])) {
-        break;
-    }
-
-    $users = array_merge($users, $data['response']['items']);
-    $offset += $limit;
-}
-
-writeUsersToFile($users, $file_path);
-
 function writeUserToFile($user_id) {
     $user_info = getUserInfo($user_id);
-    if ($user_info['response'][0]['is_closed'] == false) {
+    if ($user_info['response'][0]['is_closed'] == false && $user_info['response'][0]['deactivated'] !== '') {
         $file_path = './user_data.txt';
         $file_content = '';
 
