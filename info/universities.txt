@@ -4,21 +4,25 @@ City ID: 59
 Faculty ID: 2282710
 Faculty Name: Программная инженерия
 Graduation: 2026
+Education Status: Студентка (бакалавр)
 ID: 289
 Name: МПГУ (бывш. МГПИ им. Ленина)
 City ID: 1
 Faculty ID: 1253
 Faculty Name: Художественно-графический факультет
 Graduation: 2011
+Education Status: Выпускница (специалист)
 ID: 1
 Name: СПбГУ
 City ID: 2
 Faculty ID: 3
 Faculty Name: Институт наук о Земле (бывш. Факультет географии и геоэкологии и Геологический факультет)
 Graduation: 
+Education Status: 
 ID: 81
 Name: СЗИУ РАНХиГС (бывш. СЗАГС)
 City ID: 2
 Faculty ID: 338
 Faculty Name: Факультет государственного и муниципального управления
 Graduation: 
+Education Status: 

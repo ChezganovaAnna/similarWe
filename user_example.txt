@@ -80,3 +80,239 @@
       }
     }
   }
+
+
+
+["response"]=>
+  array(1) {
+    [0]=>
+    array(40) {
+      ["id"]=>
+      int(211043234)
+      ["domain"]=>
+      string(14) "chezganovaanya"
+      ["bdate"]=>
+      string(9) "18.9.2000"
+      ["city"]=>
+      array(2) {
+        ["id"]=>
+        int(59)
+        ["title"]=>
+        string(19) "Йошкар-Ола"
+      }
+      ["country"]=>
+      array(2) {
+        ["id"]=>
+        int(1)
+        ["title"]=>
+        string(12) "Россия"
+      }
+      ["timezone"]=>
+      float(3)
+      ["interests"]=>
+      string(34) "Музыка, творчество"
+      ["books"]=>
+      string(118) "Dragonlance, Ведьмак, По Ту Сторону Реки, Дженни Далфин и Скрытые Земли"
+      ["tv"]=>
+      string(0) ""
+      ["quotes"]=>
+      string(86) "Сделала людям добро - и беги
+(народная мудрость)"
+      ["about"]=>
+      string(3) "..."
+      ["games"]=>
+      string(0) ""
+      ["movies"]=>
+      string(19) "Суинни Тод"
+      ["activities"]=>
+      string(20) "Доброволец"
+      ["home_phone"]=>
+      string(0) ""
+      ["last_seen"]=>
+      array(2) {
+        ["platform"]=>
+        int(7)
+        ["time"]=>
+        int(1719168211)
+      }
+      ["followers_count"]=>
+      int(213)
+      ["occupation"]=>
+      array(6) {
+        ["id"]=>
+        int(1192536)
+        ["name"]=>
+        string(41) "Метатех (Институт iSpring)"
+        ["type"]=>
+        string(10) "university"
+        ["graduate_year"]=>
+        int(2026)
+        ["country_id"]=>
+        int(1)
+        ["city_id"]=>
+        int(59)
+      }
+      ["career"]=>
+      array(0) {
+      }
+      ["military"]=>
+      array(0) {
+      }
+      ["university"]=>
+      int(1192536)
+      ["university_name"]=>
+      string(41) "Метатех (Институт iSpring)"
+      ["faculty"]=>
+      int(2282710)
+      ["faculty_name"]=>
+      string(41) "Программная инженерия"
+      ["graduation"]=>
+      int(2026)
+      ["education_status"]=>
+      string(37) "Студентка (бакалавр)"
+      ["home_town"]=>
+      string(19) "Йошкар-Ола"
+      ["relation"]=>
+      int(0)
+      ["personal"]=>
+      array(7) {
+        ["alcohol"]=>
+        int(0)
+        ["inspired_by"]=>
+        string(45) "Желание спать и рассветы"
+        ["langs"]=>
+        array(2) {
+          [0]=>
+          string(14) "Русский"
+          [1]=>
+          string(7) "English"
+        }
+        ["langs_full"]=>
+        array(2) {
+          [0]=>
+          array(2) {
+            ["id"]=>
+            int(0)
+            ["native_name"]=>
+            string(14) "Русский"
+          }
+          [1]=>
+          array(2) {
+            ["id"]=>
+            int(3)
+            ["native_name"]=>
+            string(7) "English"
+          }
+        }
+        ["life_main"]=>
+        int(6)
+        ["people_main"]=>
+        int(0)
+        ["smoking"]=>
+        int(4)
+      }
+      ["universities"]=>
+      array(1) {
+        [0]=>
+        array(9) {
+          ["city"]=>
+          int(59)
+          ["country"]=>
+          int(1)
+          ["education_status"]=>
+          string(37) "Студентка (бакалавр)"
+          ["education_status_id"]=>
+          int(3)
+          ["faculty"]=>
+          int(2282710)
+          ["faculty_name"]=>
+          string(41) "Программная инженерия"
+          ["graduation"]=>
+          int(2026)
+          ["id"]=>
+          int(1192536)
+          ["name"]=>
+          string(41) "Метатех (Институт iSpring)"
+        }
+      }
+      ["schools"]=>
+      array(1) {
+        [0]=>
+        array(9) {
+          ["city"]=>
+          int(59)
+          ["class"]=>
+          string(2) "в"
+          ["class_id"]=>
+          int(3)
+          ["country"]=>
+          int(1)
+          ["id"]=>
+          string(5) "13350"
+          ["name"]=>
+          string(16) "Школа №30"
+          ["year_from"]=>
+          int(2018)
+          ["year_graduated"]=>
+          int(2021)
+          ["year_to"]=>
+          int(2021)
+        }
+      }
+      ["relatives"]=>
+      array(0) {
+      }
+      ["counters"]=>
+      array(17) {
+        ["albums"]=>
+        int(11)
+        ["audios"]=>
+        int(879)
+        ["followers"]=>
+        int(3)
+        ["friends"]=>
+        int(210)
+        ["gifts"]=>
+        int(89)
+        ["groups"]=>
+        int(793)
+        ["online_friends"]=>
+        int(2)
+        ["pages"]=>
+        int(343)
+        ["photos"]=>
+        int(3000)
+        ["subscriptions"]=>
+        int(14)
+        ["videos"]=>
+        int(105)
+        ["video_playlists"]=>
+        int(0)
+        ["new_photo_tags"]=>
+        int(0)
+        ["new_recognition_tags"]=>
+        int(1)
+        ["clips_followers"]=>
+        int(213)
+        ["clips_views"]=>
+        int(0)
+        ["clips_likes"]=>
+        int(0)
+      }
+      ["sex"]=>
+      int(1)
+      ["screen_name"]=>
+      string(14) "chezganovaanya"
+      ["friend_status"]=>
+      int(0)
+      ["first_name"]=>
+      string(6) "Аня"
+      ["last_name"]=>
+      string(18) "Чезганова"
+      ["can_access_closed"]=>
+      bool(true)
+      ["is_closed"]=>
+      bool(false)
+    }
+  }
+}
