@@ -1,5 +1,5 @@
 University IDs: 1192536,289,1,81
 Faculty IDs: 2282710,1253,3,338
-Graduation Years: 2026,2011,
+Graduation Years: 2026,,2011
 City IDs: 59,1,2
-Education Status: Студентка (бакалавр),Выпускница (специалист),
+Education Status: Студентка (бакалавр),,Выпускница (специалист)

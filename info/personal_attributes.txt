@@ -1,4 +1,4 @@
 Alcohol: 0,
-Life Main: 6,1,
+Life Main: 6,0,1,
 People Main: 0,2,
-Smoking: 4,2,
+Smoking: 4,0,2,

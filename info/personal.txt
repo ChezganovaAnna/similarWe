@@ -4,6 +4,16 @@ People Main: 0
 Smoking: 4
 
 Alcohol: 0
+Life Main: 0
+People Main: 0
+Smoking: 0
+
+Alcohol: 0
+Life Main: 0
+People Main: 0
+Smoking: 0
+
+Alcohol: 0
 Life Main: 1
 People Main: 2
 Smoking: 2

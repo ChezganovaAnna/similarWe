@@ -5,6 +5,12 @@ Faculty ID: 2282710
 Faculty Name: Программная инженерия
 Graduation: 2026
 Education Status: Студентка (бакалавр)
+ID: 1192536
+Name: Метатех (Институт iSpring)
+City ID: 59
+Faculty Name:
+Graduation: 
+Education Status: 
 ID: 289
 Name: МПГУ (бывш. МГПИ им. Ленина)
 City ID: 1
