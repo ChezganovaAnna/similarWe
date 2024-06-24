@@ -1,0 +1,82 @@
+ array(1) {
+    ["response"]=>
+    array(1) {
+      [0]=>
+      array(15) {
+        ["id"]=>
+        int(50009)
+        ["domain"]=>
+        string(7) "id50009"
+        ["bdate"]=>
+        string(3) "1.2"
+        ["city"]=>
+        array(2) {
+          ["id"]=>
+          int(2)
+          ["title"]=>
+          string(29) "Санкт-Петербург"
+        }
+        ["country"]=>
+        array(2) {
+          ["id"]=>
+          int(1)
+          ["title"]=>
+          string(12) "Россия"
+        }
+        ["last_seen"]=>
+        array(2) {
+          ["platform"]=>
+          int(4)
+          ["time"]=>
+          int(1719160956)
+        }
+        ["followers_count"]=>
+        int(470)
+        ["counters"]=>
+        array(14) {
+          ["albums"]=>
+          int(0)
+          ["audios"]=>
+          int(0)
+          ["followers"]=>
+          int(283)
+          ["friends"]=>
+          int(187)
+          ["online_friends"]=>
+          int(10)
+          ["pages"]=>
+          int(74)
+          ["photos"]=>
+          int(7)
+          ["subscriptions"]=>
+          int(2)
+          ["videos"]=>
+          int(32)
+          ["video_playlists"]=>
+          int(0)
+          ["mutual_friends"]=>
+          int(0)
+          ["clips_followers"]=>
+          int(470)
+          ["clips_views"]=>
+          int(0)
+          ["clips_likes"]=>
+          int(0)
+        }
+        ["sex"]=>
+        int(1)
+        ["screen_name"]=>
+        string(7) "id50009"
+        ["friend_status"]=>
+        int(0)
+        ["first_name"]=>
+        string(10) "Ольга"
+        ["last_name"]=>
+        string(20) "Григорьева"
+        ["can_access_closed"]=>
+        bool(true)
+        ["is_closed"]=>
+        bool(false)
+      }
+    }
+  }
