@@ -67,9 +67,10 @@ function getInfoAboutEducation($user_info) {
                 file_put_contents($university_file_path, $university_info, FILE_APPEND);
             }
             $attributes = getUniqueUniversityAttributes($university_file_path);
+            echo "mne ploho";
+            var_dump($attributes);
             writeAttributesToFile($attributes, 'info/university_attributes.txt');
         }
-
     }
 }
 
@@ -77,27 +78,22 @@ function getInfoAboutPersonal($user_info)
 {
     $personal_file_path = 'info/personal.txt';
     file_put_contents($personal_file_path, '');
-    foreach ($user_info as $user_id => $user_info_data) {
-        echo 'my statement';
 
-        var_dump($user_info_data['response'][0]['personal']['alcohol']);
-
-
-        if (isset($user_info_data['response'][0]['personal'])) {
-            foreach ($user_info_data['response'][0]['personal'] as $personal) {
-                $personal_info = "";
-                if (isset($personal['alcohol']) == 0) {
-                    $personal_info .= "Alcohol: 0\n";
-                } elseif (isset($personal['alcohol'])) {
-                    $personal_info .= "Alcohol: {$personal['alcohol']}\n";
-                } else
-                    $personal_info .= "Alcohol: \n";
-
-                file_put_contents($personal_file_path, $personal_info, FILE_APPEND);
-            }
-            $attributes = getUniquePersonalAttributes($personal_file_path);
-            writeAttributesToFile($attributes, 'info/personal_attributes.txt');
+    foreach ($user_info as $user) {
+        echo "stem";
+        var_dump($user);
+        if (isset($user['response'][0]['personal'])) {
+            $personal_info = "Alcohol: " . $user['response'][0]['personal']['alcohol'] . "\n";
+            $personal_info .= "Life Main: " . $user['response'][0]['personal']['life_main'] . "\n";
+            $personal_info .= "People Main: " . $user['response'][0]['personal']['people_main'] . "\n";
+            $personal_info .= "Smoking: " . $user['response'][0]['personal']['smoking'] . "\n\n";
+            echo $personal_info;
+            file_put_contents($personal_file_path, $personal_info, FILE_APPEND);
         }
+        $attributes = getUniquePersonalAttributes($personal_file_path);
+        echo "my attributes";
+        var_dump($attributes);
+        writeAttributesToFile($attributes, 'info/personal_attributes.txt');
     }
 }
 
@@ -128,6 +124,14 @@ function generateUserVectors($user_info_data, $attributes_file_path): array {
     $unique_city_ids = array_map('intval', explode(',', $attributes['City IDs']));
     $unique_education_status = array_map('intval', explode(',', $attributes['Education Status']));
 
+    $attributes_personal = readAttributesFromFile('personal_attributes.txt');
+    $unique_alcohol_values = array_map('intval', explode(',', $attributes['Alcohol']));
+    $unique_life_main_values = array_map('intval', explode(',', $attributes['Life Main']));
+    $unique_people_main_values = array_map('intval', explode(',', $attributes['People Main']));
+    $unique_smoking_values = array_map('intval', explode(',', $attributes['Smoking']));
+
+
+
     $users_vectors = [];
     foreach ($user_info_data as $user_id => $user_info) {
         $user_vector = array_fill_keys($unique_university_ids, 0);
@@ -135,6 +139,13 @@ function generateUserVectors($user_info_data, $attributes_file_path): array {
         $graduation_vector = array_fill_keys($unique_graduation_years, 0);
         $city_vector = array_fill_keys($unique_city_ids, 0);
         $education_vector = array_fill_keys($unique_education_status, 0);
+
+
+        $alcohol_vector = array_fill_keys($unique_alcohol_values, 0);
+        $life_main_vector = array_fill_keys($unique_life_main_values, 0);
+        $people_main_vector = array_fill_keys($unique_people_main_values, 0);
+        $smoking_vector = array_fill_keys($unique_smoking_values, 0);
+
 
         if (isset($user_info['response'][0]['university']) && in_array($user_info['response'][0]['university'], $unique_university_ids)) {
             $user_vector[$user_info['response'][0]['university']] = 1;
@@ -156,12 +167,27 @@ function generateUserVectors($user_info_data, $attributes_file_path): array {
             $education_vector[$user_info['response'][0]['universities']['education_status']] = 1;
         }
 
-        $combined_vector = array_merge($user_vector, $faculty_vector, $graduation_vector, $city_vector, $education_vector);
+        foreach ($unique_alcohol_values as $value) {
+            $alcohol_vector[] = (isset($user_info['response'][0]['personal']['alcohol']) && $user_info['response'][0]['personal']['alcohol'] == $value) ? 1 : 0;
+        }
+
+        foreach ($unique_life_main_values as $value) {
+            $life_main_vector[] = (isset($user_info['response'][0]['personal']['life_main']) && $user_info['response'][0]['personal']['life_main'] == $value) ? 1 : 0;
+        }
+
+        foreach ($unique_people_main_values as $value) {
+            $people_main_vector[] = (isset($user_info['response'][0]['personal']['people_main']) && $user_info['response'][0]['personal']['people_main'] == $value) ? 1 : 0;
+        }
+
+        foreach ($unique_smoking_values as $value) {
+            $smoking_vector[] = (isset($user_info['response'][0]['personal']['smoking']) && $user_info['response'][0]['personal']['smoking'] == $value) ? 1 : 0;
+        }
+
+        $combined_vector = array_merge($user_vector, $faculty_vector, $city_vector, $graduation_vector, $education_vector, $alcohol_vector, $life_main_vector, $people_main_vector, $smoking_vector);
         $users_vectors[] = "$user_id " . implode(' ', array_values($combined_vector)) . "\n";
     }
     return $users_vectors;
 }
-
 function readAttributesFromFile($file_path): array {
     $attributes = [];
     $file_content = file_get_contents($file_path);
@@ -176,7 +202,6 @@ function readAttributesFromFile($file_path): array {
     }
     return $attributes;
 }
-
 function writeVectorToFile($vector, $file_path) {
     file_put_contents($file_path, '');
     $output_content = '';
@@ -185,7 +210,6 @@ function writeVectorToFile($vector, $file_path) {
     }
     file_put_contents($file_path, $output_content);
 }
-
 function getUniqueUniversityAttributes($university_file_path): array {
     $university_info = file_get_contents($university_file_path);
     $university_info_lines = explode("\n", $university_info);
@@ -232,17 +256,33 @@ function getUniquePersonalAttributes($personal_file_path): array {
     $personal_info = file_get_contents($personal_file_path);
     $personal_info_lines = explode("\n", $personal_info);
     $unique_alcohol_ids = [];
+    $unique_life_main_ids = [];
+    $unique_people_main_ids = [];
+    $unique_smoking_ids = [];
     foreach ($personal_info_lines as $line) {
         list($key, $value) = explode(':', $line);
         $key = trim($key);
         $value = trim($value);
         if ($key == 'Alcohol') {
             $unique_alcohol_ids[] = $value;
+        }elseif ($key == 'Life Main') {
+            $unique_life_main_ids[] = $value;
+        } elseif ($key == 'People Main') {
+            $unique_people_main_ids[] = $value;
+        } elseif ($key == 'Smoking') {
+            $unique_smoking_ids[] = $value;
         }
     }
     $unique_alcohol_ids = array_unique($unique_alcohol_ids);
+    $unique_life_main_ids = array_unique($unique_life_main_ids);
+    $unique_people_main_ids = array_unique($unique_people_main_ids);
+    $unique_smoking_ids = array_unique($unique_smoking_ids);
     return [
-        'alcohol' => implode(',', $unique_alcohol_ids)
+        'alcohol' => implode(',', $unique_alcohol_ids),
+        'life_main' => implode(',', $unique_life_main_ids),
+        'people_main' => implode(',', $unique_people_main_ids),
+        'smoking' => implode(',', $unique_smoking_ids),
+
     ];
 }
 
@@ -259,6 +299,9 @@ function writeAttributesToFile($attributes, $file_path) {
     } elseif ($file_path == 'info/personal_attributes.txt')
     {
         $file_content .= 'Alcohol: ' . $attributes['alcohol'] . "\n";
+        $file_content .= 'Life Main: ' . $attributes['life_main'] . "\n";
+        $file_content .= 'People Main: ' . $attributes['people_main'] . "\n";
+        $file_content .= 'Smoking: ' . $attributes['smoking'] . "\n";
     }
     file_put_contents($file_path, $file_content);
 }

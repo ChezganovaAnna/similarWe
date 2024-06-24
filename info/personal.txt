@@ -1,0 +1,15 @@
+Alcohol: 0
+Life Main: 6
+People Main: 0
+Smoking: 4
+
+Alcohol: 0
+Life Main: 1
+People Main: 2
+Smoking: 2
+
+Alcohol: 
+Life Main: 
+People Main: 
+Smoking: 
+
